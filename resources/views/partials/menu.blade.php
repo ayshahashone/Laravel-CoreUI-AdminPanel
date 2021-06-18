@@ -44,14 +44,42 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="{{ route("admin.products.index") }}" class="nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}">
                     <i class="fas fa-cogs nav-icon">
 
                     </i>
                     {{ trans('global.product.title') }}
                 </a>
+            </li> -->
+            <!-- Newly add driver details -->
+            <li class="nav-item">
+                <a href="{{ route("admin.drivers.index") }}" class="nav-link {{ request()->is('admin/drivers') || request()->is('admin/drivers/*') ? 'active' : '' }}">
+                    <i class="fas fa-cogs nav-icon">
+
+                    </i>
+                    {{ trans('global.driver.title') }}
+                </a>
             </li>
+            <!-- Newly add cab details -->
+            <li class="nav-item">
+                <a href="{{ route("admin.cabs.index") }}" class="nav-link {{ request()->is('admin/cabs') || request()->is('admin/cabs/*') ? 'active' : '' }}">
+                    <i class="fas fa-cogs nav-icon">
+
+                    </i>
+                    {{ trans('global.cab.title') }}
+                </a>
+            </li>
+            <!-- Newly add booking request details -->
+            <li class="nav-item">
+                <a href="{{ route("admin.bookings.index") }}" class="nav-link {{ request()->is('admin/bookings') || request()->is('admin/bookings/*') ? 'active' : '' }}">
+                    <i class="fas fa-cogs nav-icon"></i>
+                    {{ trans('global.booking.title') }}
+                </a>
+            </li>
+                
+
+
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-sign-out-alt">
