@@ -26,8 +26,11 @@ class BookingController extends Controller
     public function create()
     {
         abort_unless(\Gate::allows('booking_create'), 403);
-
-        return view('admin.bookings.create');
+        
+        // attach user information
+        $users = User::where('name', '!=' , 'Admin')->get();
+       
+        return view('admin.bookings.create', compact('users'));
     }
 
     public function store(StoreBookingRequest $request)

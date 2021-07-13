@@ -2,11 +2,11 @@
 @section('content')
 @can('booking_create')
     <div style="margin-bottom: 10px;" class="row">
-        <!-- <div class="col-lg-12">
+        <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.bookings.create') }}">
-                {{ trans('global.add') }} {{ trans('global.booking.title_singular') }}
+                {{ trans('global.booking.fields.offline') }} {{ trans('global.booking.fields.booking') }}
             </a>
-        </div> -->
+        </div>
     </div>
 @endcan
 <div class="card">
@@ -35,8 +35,15 @@
                             {{ trans('global.booking.fields.services') }}
                         </th>
                         <th>
+                            {{ trans('global.booking.fields.distance') }}
+                        </th>
+                        <th>
+                            {{ trans('global.booking.fields.duration') }}
+                        </th>
+                        <th>
                             {{ trans('global.booking.fields.status') }}
                         </th>
+                        
                         <th>
                             &nbsp;
                         </th>
@@ -59,6 +66,12 @@
                             </td>
                             <td>
                                 {{ $booking->services ?? '' }}
+                            </td>
+                            <td>
+                                {{ $booking->distance ?? '' }}
+                            </td>
+                            <td>
+                                {{ $booking->duration ?? '' }}
                             </td>
                             <td>
                                 @if($booking->status == 'pending')

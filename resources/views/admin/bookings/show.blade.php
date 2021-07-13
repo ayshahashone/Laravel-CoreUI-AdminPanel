@@ -41,6 +41,22 @@
                         {{ $booking->services }}
                     </td>
                 </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.booking.fields.distance') }}
+                    </th>
+                    <td>
+                        {{ $booking->distance }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.booking.fields.duration') }}
+                    </th>
+                    <td>
+                        {{ $booking->duration }}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

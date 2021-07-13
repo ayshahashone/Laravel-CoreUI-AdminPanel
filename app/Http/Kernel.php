@@ -40,5 +40,8 @@ class Kernel extends HttpKernel
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'bindings'      => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'auth.basic'    => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+		 // some other middlewares
+        'admin' => \App\Http\Middleware\AdminAuthenticated::class,
+        'user'  => \App\Http\Middleware\UserAuthenticated::class
     ];
 }

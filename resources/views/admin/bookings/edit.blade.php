@@ -110,6 +110,26 @@
                     </em>
                 @endif
             </div>
+            <!-- Distance -->
+            <div class="form-group {{ $errors->has('distance') ? 'has-error' : '' }}">
+                <label for="distance">{{ trans('global.booking.fields.distance') }}</label>
+                <input type="text" id="distance" name="distance" class="form-control" readonly value="{{ old('distance', isset($booking) ? $booking->distance : '') }}">
+                @if($errors->has('distance'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('distance') }}
+                    </em>
+                @endif
+            </div>
+            <!-- Duration -->
+            <div class="form-group {{ $errors->has('duration') ? 'has-error' : '' }}">
+                <label for="duration">{{ trans('global.booking.fields.duration') }}</label>
+                <input type="text" id="duration" name="duration" class="form-control" readonly value="{{ old('duration', isset($booking) ? $booking->duration : '') }}">
+                @if($errors->has('duration'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('duration') }}
+                    </em>
+                @endif
+            </div>
             <!-- Request Time -->
             <div class="form-group {{ $errors->has('request_time') ? 'has-error' : '' }}">
                 <label for="requesttime">{{ trans('global.booking.fields.request time') }}</label>

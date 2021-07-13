@@ -17,6 +17,8 @@ class Bookingrequest extends Model
         'to_location',
         'request_time',
         'services',
+        'distance',
+        'duration',
         'user_id',
         'status'
     ];
